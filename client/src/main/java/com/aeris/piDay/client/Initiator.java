@@ -20,7 +20,7 @@ public class Initiator {
 	//0 for Serial mode
 	//1 for HiLink mode
 	final static String serialMode = "0";
-	final static String hilinkMode = "1";
+//	final static String hilinkMode = "1";
 	 
 	
 	public static void main(String[] args2) {
@@ -66,7 +66,9 @@ public class Initiator {
 			
 		}catch(Exception e){
 			
-			//if device is in Serial Mode then it will not be able to connect to cloud 
+			//if device is in Serial Mode
+			//then it will not be able to connect to cloud
+			//and will throw Exception
 			//so nothing to do in java
 			//sms will come and wake up device
 			
