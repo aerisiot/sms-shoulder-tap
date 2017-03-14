@@ -71,45 +71,7 @@ public class Initiator {
 			//sms will come and wake up device
 			
 		}
-	/*	
-		//Create a new MQTT Connection
-		boolean connection = ConnectionUtil.getConnection();
-		logger.debug("connection: " + connection);
-		
-		if(connection){
-			
-			//publish state as online
-			
-			//publish any data
-			
-			//publish state as offline
-			
-			//to be removed: sleep for 3 seconds
-			try {
-				Thread.currentThread().sleep(3000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-			//usb-modeswitch to serial mode
-			performUsbModeSwitch(serialMode);
-			
-			//call shell script to reboot
-			//the mode switch is happening either by hotplugging or by rebooting
-			//hotplugging command is not yet working so temporarily doing rebooting
-			performReboot();
-			
-		}else{
-			
-//			//usb-modeswitch to data
-//			performUsbModeSwitch(hilinkMode);
-			
-			//exit java program to save battery... system.exit(0)
-		}
-		
-		
-		*/
+	
 	}
 
 
@@ -138,25 +100,7 @@ public class Initiator {
 	private static void performUsbModeSwitch(String targetMode) {
 		if(targetMode.equalsIgnoreCase(serialMode)){
 			//change to serialMode
-			
-//			 Runtime rt = Runtime.getRuntime();
-//             try {
-//            	 String command = "mv dummy.txt /home/vikram/piDay/client/dummy.txt";
-//            	 Process proc = rt.exec(command);
-//            	 
-////				Process proc = rt.exec("cp dummy.txt /home/vikram/piDay/dummy.txt");
-////            	 Process proc = rt.exec("sudo cp 12d1:1f01_serial /etc/usb_modeswitch.d/12d1:1f01");
-//            	 int result = proc.waitFor();
-//            	 
-//            	 logger.debug("result: " + result);
-//            	 
-//			} catch (IOException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			} catch (InterruptedException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
+
 			 String source = "./12d1:1f01_serial";
 //	        //directory where file will be copied
 	        String target ="/etc/usb_modeswitch.d/12d1:1f01";
@@ -164,40 +108,18 @@ public class Initiator {
 			copyfile(source, target);
 		}
 		
-		if(targetMode.equalsIgnoreCase(hilinkMode)){
-			//change to serialMode
-			
-			 String source = "./12d1:1f01_hilink";
-//		        //directory where file will be copied
-		        String target ="/etc/usb_modeswitch.d/12d1:1f01";
-		      
-				copyfile(source, target);
-			
-//			 Runtime rt = Runtime.getRuntime();
-//             try {
-//				Process proc = rt.exec("toHilinkMode.sh");
-//			} catch (IOException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-		}
 		
 	}
 
 
 	private static void copyfile(String source, String target) {
-		// TODO Auto-generated method stub
-		//absolute path for source file to be copied
-//        String source = "./12d1:1f01_serial";
-//        //directory where file will be copied
-//        String target ="/etc/usb_modeswitch.d/12d1:1f01";
-      
+		
         //name of source file
         File sourceFile = new File(source);
         String name = sourceFile.getName();
       
         File targetFile = new File(target);
-        System.out.println("Copying file : " + sourceFile.getName() +" from Java Program");
+        logger.debug("Copying file : " + sourceFile.getName() +" from Java Program");
       
         //copy file from one location to other
         try {
@@ -207,7 +129,7 @@ public class Initiator {
 			e.printStackTrace();
 		}
       
-        System.out.println("copying of file from Java program is completed");
+        logger.debug("copying of file from Java program is completed");
 
 
 	}
