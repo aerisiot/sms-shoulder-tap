@@ -51,7 +51,6 @@ public class Initiator {
 			logger.debug("data sent complete...");
 
 				Thread.currentThread().sleep(3000);
-
 			
 			logger.debug("device now going to sleep...");
 			
