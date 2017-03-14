@@ -17,19 +17,24 @@ public class PublishSubscribeSampleTest {
 	static Logger logger = LoggerFactory.getLogger(PublishSubscribeSampleTest.class);
 
 	@Test
-	public void testConnectivityExceptionWhenNoInternet() {
+	public void testExceptionWithWrongCertificate() {
 		
 		boolean exceptionOccurred = false;
 		
-		String[] args = new String[8];
+		String[] args = new String[9];
 		args[0] = "-clientEndpoint";
 		args[1] = "a26y5ns1489swl.iot.us-west-2.amazonaws.com";
 		args[2] = "-clientId";
 		args[3] = "sdk-java";
 		args[4] = "-certificateFile";
 		args[5] = "myPie.cert.pem";
+		//passing wrong private key
 		args[6] = "-privateKeyFile";
-		args[7] = "myPie.private.key";
+//		args[7] = "myPie.private.key";
+		args[7] = "wrong.private.key";
+		//device will publish for X seconds and then disconenct
+		args[8] = "10";
+		
 		
 		try{
 			PublishSubscribeSample.publishDatatoCloud(args);
