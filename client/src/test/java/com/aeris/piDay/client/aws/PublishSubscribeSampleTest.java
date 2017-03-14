@@ -1,4 +1,4 @@
-package client;
+package com.aeris.piDay.client.aws;
 
 import static org.junit.Assert.*;
 
@@ -17,7 +17,7 @@ public class PublishSubscribeSampleTest {
 	static Logger logger = LoggerFactory.getLogger(PublishSubscribeSampleTest.class);
 
 	@Test
-	public void testExceptionWithWrongCertificate() {
+	public void testExceptionWithWrongPrivateKey() {
 		
 		boolean exceptionOccurred = false;
 		
@@ -31,7 +31,7 @@ public class PublishSubscribeSampleTest {
 		//passing wrong private key
 		args[6] = "-privateKeyFile";
 //		args[7] = "myPie.private.key";
-		args[7] = "wrong.private.key";
+		args[7] = "src/test/resources/wrong.private.key";
 		//device will publish for X seconds and then disconenct
 		args[8] = "10";
 		
