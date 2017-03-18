@@ -1,16 +1,13 @@
 package com.aeris.piDay.client;
 
+import java.io.File;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.amazonaws.services.iot.client.sample.pubSub.PublishSubscribeSample;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.Date;
-import org.apache.commons.io.FileUtils;
 
 
 public class Initiator {
@@ -31,30 +28,18 @@ public class Initiator {
 			//pending: move the args out of the code and pass from the shell script
 			
 			logger.debug("--- initiated ---");
-			String[] args = new String[9];
-			args[0] = "-clientEndpoint";
-			args[1] = "a26y5ns1489swl.iot.us-west-2.amazonaws.com";
-			args[2] = "-clientId";
-			args[3] = "sdk-java";
-			args[4] = "-certificateFile";
-			args[5] = "myPie.cert.pem";
-			args[6] = "-privateKeyFile";
-			args[7] = "myPie.private.key";
-			//device will publish for X seconds and then disconenct
-			args[8] = "10";
 			
 			logger.debug("--- start: publishing data to Cloud ---");
 			
-			PublishSubscribeSample.publishDatatoCloud(args);
+			PublishSubscribeSample.publishDatatoCloud(args2);
 
 			
 			logger.debug("data sent complete...");
-
-				Thread.currentThread().sleep(3000);
+				
+				Thread.sleep(1000);
 			
 			logger.debug("device now going to sleep...");
 			
-			Thread.currentThread().sleep(3000);
 			
 			//usb-modeswitch to serial mode
 			performUsbModeSwitch(serialMode);
@@ -121,7 +106,7 @@ public class Initiator {
         String name = sourceFile.getName();
       
         File targetFile = new File(target);
-        logger.debug("Copying file : " + sourceFile.getName() +" from Java Program");
+        logger.debug("Copying file : " + sourceFile.getName());
       
         //copy file from one location to other
         try {
@@ -131,7 +116,7 @@ public class Initiator {
 			e.printStackTrace();
 		}
       
-        logger.debug("copying of file from Java program is completed");
+        logger.debug("Copying of file completed");
 
 
 	}

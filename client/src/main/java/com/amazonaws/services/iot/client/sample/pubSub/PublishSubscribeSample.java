@@ -152,7 +152,7 @@ public class PublishSubscribeSample {
 //          nonBlockingPublishThread.join();
           
     
-				Thread.currentThread().sleep(Integer.parseInt(args[8])*1000);
+				Thread.sleep(Integer.parseInt(args[8])*1000);
 	      
           awsIotClient.disconnect();
          
