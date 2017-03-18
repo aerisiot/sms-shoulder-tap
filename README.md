@@ -10,7 +10,7 @@ Implementation to demonstrate that an IOT device can be brought online by sendin
 
 
 ## How to Run the Client
-1. Follow all instructions from the [secure-pubsub wiki](https://github.com/aerisiot/sms-shoulder-tap/wiki) before running this client.
+1. Follow all instructions from the [sms-shoulder-tap wiki](https://github.com/aerisiot/sms-shoulder-tap/wiki) before running this client.
 
 2. Boot the Raspberry Pi and start a terminal console.
 
