@@ -3,19 +3,20 @@ Implementation to demonstrate that an IOT device can be brought online by sendin
 
 ## Prerequsite
 * Raspberry Pi w/ Raspbian OS
-* JRE 8 
 * Aeris SIM
-* Celluar Modem
+* Celluar Modem (Huawei Dongle)
 * AWS IOT Account
 
 
-## How to Run the Client
-1. Follow all instructions from the [sms-shoulder-tap wiki](https://github.com/aerisiot/sms-shoulder-tap/wiki) before running this client.
+## How to Run the Use Case
+Follow all instructions from the [sms-shoulder-tap wiki](https://github.com/aerisiot/sms-shoulder-tap/wiki).
 
-2. Boot the Raspberry Pi and start a terminal console.
-
-3. Download securePubNub.js to a directory on the Pi.
-
-4. Login to your Aeris account at https://aerport.aeris.com. Find the SIM card by ICCD and then use the "Send SMS" menu in the Dashboard to send an SMS. Put any content in the SMS, for example "hello" and send it. 
-
-See the [secure-pubsub wiki](https://github.com/aerisiot/sms-shoulder-tap/wiki) for more information.
+  1. Connect Modem to Pi and complete setup. 
+  
+  2. Download and install client on Pi.
+  
+  3. Setup AWS IOT account.
+  
+  4. Setup Aeris Aerport account to send SMS.
+  
+  5. Execute the Use Case and verify behavior
