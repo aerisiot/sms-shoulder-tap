@@ -20,5 +20,5 @@ Follow all instructions from the [sms-shoulder-tap wiki](https://github.com/aeri
   4. Setup Aeris Aerport account to send SMS.
   
   5. Execute the Use Case and verify behavior
-  
-  [[images/IMG_2778.JPG]](https://www.youtube.com/watch?v=Qn3M8te1hG8)
+    
+  [![SMS_Shoulder_Tap_DEMO](https://github.com/aerisiot/sms-shoulder-tap/blob/master/Selection_067.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "Everything Is AWESOME")
