@@ -21,4 +21,4 @@ Follow all instructions from the [sms-shoulder-tap wiki](https://github.com/aeri
   
   5. Execute the Use Case and verify behavior
   
-  [![Click to play sms_shoulder_tap_demo](Selection_067.png)](https://www.youtube.com/watch?v=Qn3M8te1hG8)
+  [[images/Selection_067.png]](https://www.youtube.com/watch?v=Qn3M8te1hG8)
