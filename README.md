@@ -21,4 +21,4 @@ Follow all instructions from the [sms-shoulder-tap wiki](https://github.com/aeri
   
   5. Execute the Use Case and verify behavior
     
-  [![SMS_Shoulder_Tap_DEMO](https://github.com/aerisiot/sms-shoulder-tap/blob/master/Selection_067.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "Everything Is AWESOME")
+  [![SMS_Shoulder_Tap_DEMO](https://github.com/aerisiot/sms-shoulder-tap/blob/master/Selection_067.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "SMS Shoulder Tap Demo")
